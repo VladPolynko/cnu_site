@@ -22,7 +22,6 @@ jQuery(function ($) {
 
     //-------------------------------------------------append
     function apend_group (){     //load group_arrey
-        console.log('append');
         for(var i=0; i<group_array.length; i++){
             $("#group_load").append('<li class='+ group_array[i]+'>'+group_array[i]+'</li>');
         }
@@ -52,7 +51,6 @@ jQuery(function ($) {
         //monday['first'][0].one
         for(var i=0; i < monday['first'].length; i++){
             for(var element in monday['first'][i]){
-                console.log(monday['first'][i][element]);
                 $('#num').append('<div>'+num+'</div>');
                 num+=1;
                 $("#append_first")
@@ -61,18 +59,24 @@ jQuery(function ($) {
         }
         for(var i=0; i < monday['two'].length; i++){
             for(var element in monday['two'][i]){
-                console.log(monday['two'][i][element]);
                 $("#append_two")
                     .append('<li class='+'room'+i+'>'+monday['two'][i][element]+'</li>');
             }
         }
+    }
+
+    function global_click_f (target){
+        console.log('++');
+        console.log(target);
+        console.log(global_click);
+        $('.' + global_click).html('');
+        $('.' + global_click).append(target);
     }
     apend_group ();
 
     //--------------------------------------------///append
     $(window).load( function () {
         $('#whirlpool').hide(2000);
-        console.log('Sloadder');
     });
 
 //-----------------------------slide up/down
@@ -97,41 +101,49 @@ var group_load_onClick_room_array;
         console.log(event.target.className);
         for(var i=0; i<group_array.length; i++) {
             if(event.target.className == group_array[i]){
-                console.log('true');
                 group_load_onClick_lesson_array = lesson_array[event.target.className];
                 group_load_onClick_room_array = room_array;
             }
-            append_content();
+
         }
+        append_content();
     });
 
     $(document).on('click', '#wrapper_content_week', function (event) {
         event.preventDefault();
 
-        console.log(event.target.className);
+        //console.log(event.target.className);
         global_click = event.target.className;
     });
 
 
     $(document).on('click', '#lessons_onClick', function (event) {
         append_lesson(group_load_onClick_lesson_array);
+        console.log(event.target.className+'globalclick');
+        global_click = event.target.className;
+        $('#lesson_load').show();
     });
     $(document).on('click', '#room_onClick', function (event) {
         append_room(group_load_onClick_room_array);
+        console.log(event.target.className+'globalclick');
+        global_click = event.target.className;
+        $('#room_load').show();
     });
 
 
     $(document).on('click', '#room_load', function (event) {
         event.preventDefault();
-        console.log(event.target.className);
-        global_click = event.target.className;
+        $('#room_load').hide();
+        global_click_f(event.target.className);
     });
 
     $(document).on('click', '#lesson_load', function (event) {
         event.preventDefault();
+        $('#lesson_load').hide();
+        global_click_f(event.target.className);
         console.log(event.target.className);
-
     });
+
 });
 //
 

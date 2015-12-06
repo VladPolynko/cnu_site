@@ -145,3 +145,10 @@ body {
 .glyphicon{
     padding: 0px;
 }
+
+.lessonsAndRoom li{
+    border-bottom: 1px dashed #777777;
+}
+#num div{
+    padding:0 0 1px 0;
+}

@@ -4,8 +4,8 @@
 //--------------------arr
 var weekday = {};
 var monday = {
-    'first' : [{'one': '11'},{'two': '12'},{'three': '13'},{'four': '14'},{'five': '15'},{'six': '16'}],
-    'two': [{'one': '21'},{'two': '22'},{'three': '23'},{'four': '24'},{'five': '25'},{'six': '26'}]
+    'first' : [{'one': ''},{'two': ''},{'three': ''},{'four': ''},{'five': ''},{'six': ''}],
+    'two': [{'one': ''},{'two': ''},{'three': ''},{'four': ''},{'five': ''},{'six': ''}]
 };
 var group_array =['KS-12(I)', 'KI-12','KI-11']; //group
 var lesson_array = {

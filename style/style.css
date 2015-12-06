@@ -1,0 +1,147 @@
+html,
+body {
+    height: 100%;
+    background: url("img/bg_img.jpg");
+    font-size: 1em;
+}
+.log_in_dropdown{
+    background: #222222;
+    color: rgb(157, 157, 157);
+    padding: 10px;
+}
+.wrapper_content{
+    border: 2px solid #5e5e5e;
+    background: #222222;
+    color: rgb(157, 157, 157);
+    padding: 10px;
+}
+.content_border{
+    margin: 15px 0 ;
+}
+.caption-carousel{
+    color: rgba(255,255,255,.8);
+}
+.h2_for_content{
+    font-size: 1.5em;
+    text-align: center;
+}
+.img-rounded{
+    width: 60%;
+}
+.abridgment{
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+}
+/*------------------LOAD PAGE*/
+.whirlpool_wrapper{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,1);
+    z-index: 998;
+}
+.cssload-container{
+    position:relative;
+}
+.cssload-whirlpool,
+.cssload-whirlpool::before,
+.cssload-whirlpool::after {
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid rgb(204,204,204);
+    border-left-color: rgb(0,0,0);
+    border-radius: 974px;
+    -o-border-radius: 974px;
+    -ms-border-radius: 974px;
+    -webkit-border-radius: 974px;
+    -moz-border-radius: 974px;
+}
+.cssload-whirlpool{
+    margin: 30% 0 0 -24px;
+    height: 49px;
+    width: 49px;
+    animation: cssload-rotate 1150ms linear infinite;
+    -o-animation: cssload-rotate 1150ms linear infinite;
+    -ms-animation: cssload-rotate 1150ms linear infinite;
+    -webkit-animation: cssload-rotate 1150ms linear infinite;
+    -moz-animation: cssload-rotate 1150ms linear infinite;
+}
+.cssload-whirlpool_text{
+    color:white;
+    margin: 25% 0 0 -38px;
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.cssload-whirlpool::before {
+    content: "";
+    margin: -22px 0 0 -22px;
+    height: 43px;
+    width: 43px;
+    animation: cssload-rotate 1150ms linear infinite;
+    -o-animation: cssload-rotate 1150ms linear infinite;
+    -ms-animation: cssload-rotate 1150ms linear infinite;
+    -webkit-animation: cssload-rotate 1150ms linear infinite;
+    -moz-animation: cssload-rotate 1150ms linear infinite;
+}
+.cssload-whirlpool::after {
+    content: "";
+    margin: -28px 0 0 -28px;
+    height: 55px;
+    width: 55px;
+    animation: cssload-rotate 2300ms linear infinite;
+    -o-animation: cssload-rotate 2300ms linear infinite;
+    -ms-animation: cssload-rotate 2300ms linear infinite;
+    -webkit-animation: cssload-rotate 2300ms linear infinite;
+    -moz-animation: cssload-rotate 2300ms linear infinite;
+}
+@keyframes cssload-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@-o-keyframes cssload-rotate {
+    100% {
+        -o-transform: rotate(360deg);
+    }
+}
+@-ms-keyframes cssload-rotate {
+    100% {
+        -ms-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes cssload-rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes cssload-rotate {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+/*---------------------///--LOAD PAGE*/
+/*----------------------------group*/
+.title{
+    padding: 10px;
+    border: 1px dashed #787878;
+}
+.title:hover{
+    background: #444444;
+}
+.glyphicon-arrow-down{
+    margin: 4px 0 0 0;
+}
+.cursorPoiner li{
+    cursor: pointer;
+}
+.cursorPoiner li:hover{
+    border-bottom: 1px dashed #787878;
+}
+/*---------------/////-------group*/
+.glyphicon{
+    padding: 0px;
+}
